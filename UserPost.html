@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="topbar" class="container">
+    <section id="navbar-pd">
+      <nav class="navbar navbar-light d-flex justify-content-between">
+        <a href="javascript:history.back()" class="material-symbols-outlined arrow-design">arrow_back</a>
+        <div class="d-flex flex-column align-items-center">
+          <span class="topbar-title">Post</span>
+          <span class="topbar-with-subtitle">“Phone call not answered”</span>
+        </div>
+
+        <span class="material-symbols-outlined">share</span>
+      </nav>
+    </section>
+  </header>
+
+<main>
+  <section id="user-post" class="container">
+
+    <div class="secure-space-body">
+      <h1>Synopsis</h1>
+      <p>
+        Last night, exhausted and with his phone on silent, he finally checked it to find 17 missed calls from his brother. Worried something serious had happened, he called back immediately — but instead of his brother's voice, a woman answered coldly: “I'm sorry… he can't speak to you anymore.
+      </p>
+    </div>
+
+    <div class="secure-space-body">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Phone call not answered</h5>
+          <div class="card-subtitle-div">
+            <img src="./img/avatar/jeremy.png" class="rounded-circle" alt="Avatar">
+            <h6 class="card-subtitle">@jeremy_onhold</h6>
+          </div>
+          <p class="card-text">
+            Last night I came home late, tired, and with my phone on silent. When I checked it, I had 17 missed calls from my brother. I thought something serious had happened, so I dialed right away...
+          </p>
+          <div class="d-flex gap-2">
+            <button class="custom-btn-badge-card">Drama</button>
+            <div class="user-interactive-btn ms-auto"></div>
+            <button class="custom-btn-user-interactive">
+              <span class="material-symbols-outlined">favorite</span> 57
+            </button>
+            <button class="custom-btn-user-interactive">
+              <span class="material-symbols-outlined">share</span> 15
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secure-space-body">
+      <h1>Chapter 01</h1>
+      <p>
+        The silence was deafening. Every attempt to reach his brother was met with the same cold void. He drove to his brother's apartment, heart pounding with every step, only to find the door unlocked and the place eerily empty. 
+      </p>
+    </div>
+
+    <img src="./img/gallery/woman_with_coffee.png" class="img-fluid rounded secure-space-body" alt="Post Image" width="100%">
+
+    <div class="secure-space-body">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-subtitle-div">
+            <img src="./img/avatar/jeremy.png" class="rounded-circle" alt="Avatar">
+            <h6 class="card-subtitle">@jeremy_onhold</h6>
+          </div>
+          <p class="card-text">
+            Today, my brother's phone is off, and no one in the family knows where he is. My hands trembled as I set the phone down, the echo of her voice still lingering in my ears. I tried calling again, over and over, each time met with the same cold emptiness of the dead line. I drove through the quiet streets to his apartment, hoping for some sign, but the blinds were drawn, and the door locked from the inside. A faint smell, something metallic and bitter hung in the hallway, making my stomach twist.
+          </p>
+          <div class="d-flex gap-2">
+            <div class="user-interactive-btn ms-auto"></div>
+            <button class="custom-btn-user-interactive">
+              <span class="material-symbols-outlined">favorite</span> 24
+            </button>
+            <button class="custom-btn-user-interactive">
+              <span class="material-symbols-outlined">share</span> 7
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secure-space"></div>
+    
+  </section>
+    
+
+</main>
+  
+  <footer>
+    <nav class="navbar fixed-bottom custom-bottom d-flex justify-content-around">
+        <a class="nav-link active" href="Home.html">
+          <span class="material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a class="nav-link" href="Search.html">
+          <span class="material-symbols-outlined">search</span>
+          Explore
+        </a>
+        <a class="nav-link" href="Account.html">
+          <span class="material-symbols-outlined">person</span>
+          Account
+        </a>
+    </nav>
+
+  </footer>
+
+  <div class="fab-container" id="fab">
+    <a href="writting.html" class="fab-option"><i class="fa-solid fa-pen"></i> Add Paragraph</a>
+    <a href="newstory.html" class="fab-option"><i class="fa-solid fa-book"></i> Write a Story</a>
+    <a href="addphoto.html" class="fab-option"><i class="fa-solid fa-image"></i> Add Photo</a>
+    <div class="fab-main"><i class="fa-solid fa-plus"></i></div>
+  </div>
+
+  <script>
+    const fab = document.getElementById("fab");
+    fab.querySelector(".fab-main").addEventListener("click", () => {
+      fab.classList.toggle("active");
+    });
+  </script>
+
+  <script src="/js/btn-user-interactive.js"></script>
+  <script src="/js/toolbar.js"></script>
+  <!-- Bootstrap JS Bundle con Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

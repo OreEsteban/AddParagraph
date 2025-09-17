@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="topbar" class="container">
+    <section id="navbar-pd">
+      <nav class="navbar navbar-light d-flex justify-content-between">
+        <a href="javascript:history.back()" class="material-symbols-outlined arrow-design">arrow_back</a>
+        <div class="d-flex flex-column align-items-center">
+          <span class="topbar-title">Profile</span>
+          <span class="topbar-with-subtitle">@sam.cas</span>
+        </div>
+        <span class="material-symbols-outlined">share</span>
+      </nav>
+    </section>
+  </header>
+
+<main id="profile-scroll" class="secure-space-body">
+  <section id="profile" class="container">
+    <!-- Profile header -->
+    <div class="profile-header text-center">
+      <div class="avatar-ring sam"></div>
+      <div class="profile-padding">
+        <h2 class="username">@sam.cas</h2>
+        <h2 class="followers">8.7K followers</h2>
+
+        <button class="btn-custom-follow" id="followBtn">
+          <span class="btn-text">Follow</span>
+        </button>
+
+      <script>
+        const followBtn = document.getElementById('followBtn');
+        followBtn.addEventListener('click', function () {
+          const textSpan = this.querySelector('.btn-text');
+
+          // animación de salida
+          textSpan.classList.add('fade-out');
+
+          setTimeout(() => {
+            // cambiar contenido después de la salida
+            if (this.classList.toggle('active')) {
+              textSpan.innerHTML = `<span class="material-symbols-outlined">done</span> Following`;
+            } else {
+              textSpan.innerHTML = `Follow`;
+            }
+
+            // animación de entrada
+            textSpan.classList.remove('fade-out');
+            textSpan.classList.add('fade-in');
+
+            setTimeout(() => textSpan.classList.remove('fade-in'), 200);
+          }, 200);
+        });
+      </script>
+
+
+
+      </div>
+    </div>
+
+    <div class="user-description">
+      <h6 class="description-tittle">Description</h6>
+      <p>
+         I've been sketching characters and imagining the adventures they might have. On AddParagraph, I combine my drawings with my writing to create chapters that invite readers into vivid, emotional spaces.
+      </p>
+    </div>
+
+    <section>
+      <!-- Tabs -->
+      <ul id="profile-tabs" class="nav nav-tabs custom-tabs w-100">
+        <li class="nav-item flex-fill text-center">
+          <a class="nav-link active" data-bs-toggle="tab" href="#paragraph">
+            <span class="material-symbols-outlined">book_3</span>Stories
+          </a>
+        </li>
+        <li class="nav-item flex-fill text-center">
+          <a class="nav-link" data-bs-toggle="tab" href="#illustration">
+            <span class="material-symbols-outlined">image</span>Illustrations
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contenido -->
+    <div class="tab-content tab-padding-top cards-scroll">
+      <div class="tab-pane fade show active" id="paragraph">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 secure-space">
+          <!--Inicio row-->
+
+          <!--Card-1-->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The Forgotten Letter</h5>
+                <div class="card-subtitle-div">
+                  <h6 class="card-subtitle time">22 min ago</h6>
+                </div>
+                <p class="card-text">
+                  Every day at exactly 8:03 AM, he boarded the same train carriage, headphones in, eyes on the window. She noticed him only last week, sitting two rows ahead, reading the same dog-eared novel. Today, the seat was empty, but his scarf was draped over the armrest...
+                </p>
+                <div class="d-flex gap-2">
+                  <button class="custom-btn-badge-card">Romance</button>
+                  <div class="user-interactive-btn ms-auto"></div>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">favorite</span> 24
+                  </button>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">share</span> 7
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Card-2-->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Midnight Lanterns</h5>
+                <div class="card-subtitle-div">
+                  <h6 class="card-subtitle time">11 hr ago</h6>
+                </div>
+                <p class="card-text">
+                  At midnight, the small park lit up with rows of paper lanterns, swaying gently in the breeze. He stood among strangers, yet when she smiled at him through the crowd, the world seemed to glow only brighter.
+                </p>
+                <div class="d-flex gap-2">
+                  <button class="custom-btn-badge-card">Myth</button>
+                  <div class="user-interactive-btn ms-auto"></div>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">favorite</span> 24
+                  </button>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">share</span> 7
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Card-3-->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Silent Diner</h5>
+                <div class="card-subtitle-div">
+                  <h6 class="card-subtitle time">3 hr ago</h6>
+                </div>
+                <p class="card-text">
+                  Every Friday, the corner booth was his sanctuary. The jukebox hummed softly, the coffee steamed, but his gaze was always fixed on the empty seat across from him. Tonight, for the first time, she walked in.
+                </p>
+                <div class="d-flex gap-2">
+                  <button class="custom-btn-badge-card">Adventure</button>
+                  <div class="user-interactive-btn ms-auto"></div>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">favorite</span> 24
+                  </button>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">share</span> 7
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Card-4-->
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The Quiet Commuter</h5>
+                <div class="card-subtitle-div">
+                  <h6 class="card-subtitle time">5 days ago</h6>
+                </div>
+                <p class="card-text">
+                  Every day at exactly 8:03 AM, he boarded the same train carriage, headphones in, eyes on the window. She noticed him only last week, sitting two rows ahead, reading the same dog-eared novel. Today, the seat was empty, but his scarf was draped over the armrest...
+                </p>
+                <div class="d-flex gap-2">
+                  <button class="custom-btn-badge-card">Slice of life</button>
+                  <div class="user-interactive-btn ms-auto"></div>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">favorite</span> 24
+                  </button>
+                  <button class="custom-btn-user-interactive">
+                    <span class="material-symbols-outlined">share</span> 7
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+      <!--Fin row-->
+    </div>
+    </div>
+      
+    <div class="tab-pane fade" id="illustration">
+      <!-- Galería responsive (2 cols móvil, 3 md, 4 lg) -->
+      <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-4 gallery-grid">
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_1.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_2.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_3.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_4.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_3.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_4.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_3.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+      <div class="col"><div class="ratio ratio-1x1"><img src="img/gallery/img_4.jpg" class="rounded-3 gallery-img" alt=""></div></div>
+    </div>
+
+      <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="material-symbols-outlined close">close</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+
+    <script>
+      document.querySelectorAll('.gallery-img').forEach(img => {
+        img.addEventListener('click', () => {
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+          lightbox.style.display = 'flex';
+          lightboxImg.src = img.src;
+        });
+      });
+
+      // Cerrar con el ícono
+      document.querySelector('.lightbox .close').addEventListener('click', () => {
+        document.getElementById('lightbox').style.display = 'none';
+      });
+
+      // Cerrar al hacer clic fuera de la imagen
+      document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') {
+          e.currentTarget.style.display = 'none';
+        }
+      });
+    </script>
+    </div>
+
+
+
+    
+  </section>
+    
+
+</main>
+  
+  <footer>
+    <nav class="navbar fixed-bottom custom-bottom d-flex justify-content-around">
+        <a class="nav-link" href="Home.html">
+          <span class="material-symbols-outlined">home</span>
+          Home
+        </a>
+        <a class="nav-link active" href="Search.html">
+          <span class="material-symbols-outlined">search</span>
+          Explore
+        </a>
+        <a class="nav-link" href="Account.html">
+          <span class="material-symbols-outlined">person</span>
+          Account
+        </a>
+    </nav>
+
+  </footer>
+
+  <script src="/js/btn-user-interactive.js"></script>
+  <script src="/js/toolbar.js"></script>
+  <!-- Bootstrap JS Bundle con Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
